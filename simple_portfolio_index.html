@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medha Reddy — Portfolio</title>
+  <style>
+    :root {
+      --brand:#6c5ce7;
+      --brand-dark:#5848d6;
+      --bg:#f6f7fb;
+      --text:#222;
+      --muted:#666;
+      --card:#fff;
+      --shadow: 0 8px 20px rgba(0,0,0,.08);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--text); }
+    a { color:inherit; text-decoration:none; }
+
+    header { background: linear-gradient(135deg, var(--brand), var(--brand-dark)); color:#fff; text-align:center; padding: 64px 16px 40px; }
+    header h1 { margin:0; font-size: clamp(28px, 5vw, 44px); letter-spacing: .5px; }
+    header p { margin:12px auto 0; max-width: 800px; color:#e8e7ff; font-size: clamp(14px, 2.4vw, 18px); }
+    .cta-row { margin-top:20px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    .btn { background:#fff; color:var(--brand-dark); padding:12px 18px; border-radius:999px; font-weight:600; box-shadow:var(--shadow); border:0; cursor:pointer; }
+    .btn.secondary { background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.6); }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 32px 16px 64px; }
+
+    section { margin-top: 40px; }
+    section h2 { font-size: clamp(22px, 3.6vw, 28px); margin: 0 0 12px; }
+    section p.lead { color:var(--muted); margin: 0 0 24px; }
+
+    .grid { display:grid; gap:16px; grid-template-columns: repeat(12, 1fr); }
+    .col-12 { grid-column: span 12; }
+    .col-6 { grid-column: span 6; }
+    .col-4 { grid-column: span 4; }
+    @media (max-width: 900px) {
+      .col-6, .col-4 { grid-column: span 12; }
+    }
+
+    .card { background:var(--card); border-radius: var(--radius); box-shadow: var(--shadow); overflow:hidden; display:flex; flex-direction:column; }
+    .card .thumb { aspect-ratio: 16/9; background: linear-gradient(135deg, #eceaff, #f9f9ff); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--brand-dark); }
+    .card .content { padding:16px; }
+    .card h3 { margin:0 0 6px; font-size:18px; }
+    .meta { color:var(--muted); font-size: 14px; margin-bottom:8px; }
+    .tags { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .tag { background:#eef; color:#3b28cc; padding:4px 10px; border-radius:999px; font-size:12px; }
+
+    .chips { display:flex; gap:10px; flex-wrap:wrap; }
+    .chip { background:#fff; border:1px solid #e7e7ef; padding:8px 12px; border-radius:999px; box-shadow: var(--shadow); font-size:13px; }
+
+    footer { text-align:center; padding: 24px 12px 48px; color:var(--muted); }
+
+    .contact { background:#fff; border-radius:var(--radius); box-shadow:var(--shadow); padding:20px; }
+    .contact form { display:grid; gap:12px; }
+    input, textarea { width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e0e0ea; font:inherit; }
+    textarea { min-height: 120px; }
+    .small { font-size:12px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Medha Reddy</h1>
+    <p>Product-minded SWE & ETIM @ CMU | CS undergrad passionate about creating scalable systems that balance usability, impact, and technical depth.</p>
+    <div class="cta-row">
+      <a class="btn" href="#projects">View Projects</a>
+      <a class="btn secondary" href="#experience">Experience</a>
+      <a class="btn secondary" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>About</h2>
+      <p class="lead">I approach engineering with a product lens - blending design thinking, strong fundamentals, and curiosity across software, data, and systems. My work spans automation, analytics, and building tools that simplify complex problems.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <div class="grid">
+        <div class="col-6">
+          <article class="card">
+            <div class="thumb">Amazon</div>
+            <div class="content">
+              <h3>Automation & Site Reliability Engineer II</h3>
+              <div class="meta">Jul 2023 – Nov 2024 · Hyderabad, IN</div>
+              <p>Built automation and observability for Just Walk Out retail systems; reduced incidents and MTTR across 140+ stores.</p>
+              <ul class="meta" style="margin:8px 0 0 18px;">
+              </ul>
+              <div class="tags"><span class="tag">Java</span><span class="tag">Linux</span><span class="tag">AWS</span><span class="tag">Athena</span><span class="tag">Lambda</span><span class="tag">QuickSight</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-6">
+          <article class="card">
+            <div class="thumb">PwC</div>
+            <div class="content">
+              <h3>IAM Systems Engineer Intern (Cybersecurity)</h3>
+              <div class="meta">Mar 2023 – Jul 2023 · Bengaluru, IN</div>
+              <p>Automated identity lifecycle and strengthened access compliance for enterprise clients.</p>
+              <ul class="meta" style="margin:8px 0 0 18px;">
+              </ul>
+              <div class="tags"><span class="tag">Java</span><span class="tag">IAM</span><span class="tag">Active Directory</span><span class="tag">Workday</span><span class="tag">Postman</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-6">
+          <article class="card">
+            <div class="thumb">CtrlAltFIX Solutions</div>
+            <div class="content">
+              <h3>Software Engineer Intern</h3>
+              <div class="meta">Apr 2022 – Jul 2022 ·, PA</div>
+              <p>Optimized full‑stack features and deployments for a production web app.</p>
+              <ul class="meta" style="margin:8px 0 0 18px;">
+              </ul>
+              <div class="tags"><span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">Docker</span><span class="tag">Jenkins</span><span class="tag">SQL</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-6">
+          <article class="card">
+            <div class="thumb">Arena Strategic AI</div>
+            <div class="content">
+              <h3>Project Manager Intern / Consultant</h3>
+              <div class="meta">May 2025 – Aug 2025 · Pittsburgh, PA</div>
+              <p>Bridged data engineering and strategy for investor‑facing analytics and AI pilots.</p>
+              <ul class="meta" style="margin:8px 0 0 18px;">
+              </ul>
+              <div class="tags"><span class="tag">Python</span><span class="tag">Data Pipelines</span><span class="tag">Analytics</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <p class="lead">Use these as demo artifacts in your CI/CD pipeline. Replace text and links as you like.</p>
+      <div class="grid">
+        <div class="col-4">
+          <article class="card">
+            <div class="thumb">WatchWise</div>
+            <div class="content">
+              <h3>YouTube Sentiment Analyzer</h3>
+              <div class="meta">Chrome Extension · JS · HuggingFace API</div>
+              <p>Analyzes titles/descriptions for sentiment and topic hints. Local-first design with privacy-conscious storage.</p>
+              <div class="tags"><span class="tag">Chrome MV3</span><span class="tag">NLP</span><span class="tag">Chart.js</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-4">
+          <article class="card">
+            <div class="thumb">AR Biology Learning App</div>
+            <div class="content">
+              <h3>AWS EC2 Pipeline</h3>
+              <div class="meta">C# · Unity 3D · Vuforia SDK </div>
+              <p>Launched AR-based learning app transforming static diagrams into 3D interactive models with quizzes + TTS to improve student engagement.</p>
+              <div class="tags"><span class="tag">Unity</span><span class="tag">Game Development</span><span class="tag">Augmented Reality</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-4">
+          <article class="card">
+            <div class="thumb">Data Science</div>
+            <div class="content">
+              <h3>Maternal Mortality</h3>
+              <div class="meta">Python · sklearn · WDI</div>
+              <p>Feature selection (LASSO) and Random Forest to predict mortality rates; education effects via multinomial logit.</p>
+              <div class="tags"><span class="tag">Pandas</span><span class="tag">Sklearn</span><span class="tag">EDA</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">AWS (EC2, S3, Lambda)</span><span class="chip">Jenkins</span><span class="chip">Docker</span><span class="chip">SQL</span><span class="chip">React</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <form action="mailto:mboosam@andrew.cmu.edu" method="post" enctype="text/plain">
+          <div class="grid">
+            <div class="col-6"><input type="text" name="name" placeholder="Your name" required /></div>
+            <div class="col-6"><input type="email" name="email" placeholder="Your email" required /></div>
+            <div class="col-12"><textarea name="message" placeholder="Your message" required></textarea></div>
+            <div class="col-12"><button class="btn" type="submit">Send</button> <span class="small">or email me at <a href="mailto:mboosam@andrew.cmu.edu">mboosam@andrew.cmu.edu</a></span></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Medha Reddy — All rights reserved
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
